@@ -1,0 +1,40 @@
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Terraform working directory and plugin cache
+.terraform/
+.terraform.tfstate.lock.info
+
+# State files (may contain secrets — never commit)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Saved plans (binary, may contain sensitive values)
+*.tfplan
+tfplan
+
+# Variable files with secrets (keep examples)
+*.tfvars
+*.tfvars.json
+!*.example.tfvars
+!example.tfvars
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files (local-only customizations)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration
+.terraformrc
+terraform.rc
+
+# macOS
+.DS_Store
